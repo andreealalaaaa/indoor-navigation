@@ -1,23 +1,22 @@
 //
-//  Registration.swift
+//  ProfileDetailsView.swift
 //  Indoor-Navigation
 //
-//  Created by Andreea Miculescu on 06.05.2023.
+//  Created by Andreea Miculescu on 13.05.2023.
 //
 
 import SwiftUI
 
-struct Registration: View {
+struct ProfileDetailsView: View {
     @State private var firstName = ""
     @State private var lastName = ""
     @State private var selectedFaculty = 1
     @State private var selectedSpecialization = 1
     @State private var selectedYear = ""
     @State private var group = ""
-    @State private var email = ""
-    @State private var password = ""
-    @State private var repeatedPassword = ""
-
+    @State private var changed = false
+    @State private var isHidden = true
+    
     
     var body: some View {
         NavigationView{
@@ -25,20 +24,23 @@ struct Registration: View {
                 Form{
                     name
                     faculty
-                    login
                 }
-                .navigationTitle("Registration")
+                .navigationTitle("Change your details")
                 .toolbar{
                     ToolbarItem(placement:.confirmationAction){
                         Button("Done"){
-                            
-                        }
+                            changed = true
+                        }.overlay(
+                            NavigationLink(destination: ProfileView().navigationBarBackButtonHidden(true), isActive: $changed) {
+                        })
                     }
                     
                     ToolbarItem(placement: .navigationBarLeading){
                         Button("Cancel", role: .cancel){
-                            
-                        }
+                            changed = true
+                        }.overlay(
+                            NavigationLink(destination: ProfileView().navigationBarBackButtonHidden(true), isActive: $changed) {
+                        })
                     }
                 }
             }
@@ -46,13 +48,7 @@ struct Registration: View {
     }
 }
 
-struct Registration_Previews: PreviewProvider {
-    static var previews: some View {
-        Registration()
-    }
-}
-
-private extension Registration{
+private extension ProfileDetailsView{
     var name: some View {
         Section{
             TextField("First Name", text: $firstName)
@@ -104,26 +100,11 @@ private extension Registration{
                 .cornerRadius(10)
         }
     }
-    
-    var login: some View{
-        Section{
-            TextField("Email", text: $email)
-                .padding()
-                .frame(width: 300, height: 40)
-                .background(Color.black.opacity(0.05))
-                .cornerRadius(10)
-            
-            SecureField("Password", text: $password)
-                .padding()
-                .frame(width: 300, height: 40)
-                .background(Color.black.opacity(0.05))
-                .cornerRadius(10)
-            
-            SecureField("Repeat Password", text: $repeatedPassword)
-                .padding()
-                .frame(width: 300, height: 40)
-                .background(Color.black.opacity(0.05))
-                .cornerRadius(10)
-        }
+}
+
+
+struct ProfileDetailsView_Previews: PreviewProvider {
+    static var previews: some View {
+        ProfileDetailsView()
     }
 }
