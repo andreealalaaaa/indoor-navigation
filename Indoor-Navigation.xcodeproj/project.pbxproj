@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		D4259E182A15228D00342675 /* NetworkAP+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4259E162A15228D00342675 /* NetworkAP+CoreDataClass.swift */; };
 		D4259E192A15228D00342675 /* NetworkAP+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4259E172A15228D00342675 /* NetworkAP+CoreDataProperties.swift */; };
+		D4259E1E2A1532E800342675 /* NetworkAPController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4259E1D2A1532E800342675 /* NetworkAPController.swift */; };
 		D462EEF32A0C2143003F01B2 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D462EEF22A0C2143003F01B2 /* ProfileView.swift */; };
 		D46F75722A0FC17300CB1F8E /* ProfileDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46F75712A0FC17300CB1F8E /* ProfileDetailsView.swift */; };
 		D46F75742A0FC21000CB1F8E /* PasswordChangeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46F75732A0FC21000CB1F8E /* PasswordChangeView.swift */; };
@@ -16,6 +17,8 @@
 		D4743B532A06CBA80057FA4E /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4743B522A06CBA80057FA4E /* Test.swift */; };
 		D4743B552A06D4C30057FA4E /* Registration.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4743B542A06D4C30057FA4E /* Registration.swift */; };
 		D4743B572A098DC40057FA4E /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4743B562A098DC40057FA4E /* HomeView.swift */; };
+		D4B6FA192A3E6D1A00B3892A /* CompassView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B6FA182A3E6D1A00B3892A /* CompassView.swift */; };
+		D4B6FA1B2A3E6D3400B3892A /* HomePageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B6FA1A2A3E6D3400B3892A /* HomePageView.swift */; };
 		D4ED003B2A0109D100D50BD3 /* Indoor_NavigationApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4ED003A2A0109D100D50BD3 /* Indoor_NavigationApp.swift */; };
 		D4ED003D2A0109D100D50BD3 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4ED003C2A0109D100D50BD3 /* LoginView.swift */; };
 		D4ED003F2A0109D200D50BD3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4ED003E2A0109D200D50BD3 /* Assets.xcassets */; };
@@ -47,6 +50,7 @@
 /* Begin PBXFileReference section */
 		D4259E162A15228D00342675 /* NetworkAP+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetworkAP+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
 		D4259E172A15228D00342675 /* NetworkAP+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetworkAP+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		D4259E1D2A1532E800342675 /* NetworkAPController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkAPController.swift; sourceTree = "<group>"; };
 		D462EEF22A0C2143003F01B2 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		D46F75712A0FC17300CB1F8E /* ProfileDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDetailsView.swift; sourceTree = "<group>"; };
 		D46F75732A0FC21000CB1F8E /* PasswordChangeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordChangeView.swift; sourceTree = "<group>"; };
@@ -54,6 +58,8 @@
 		D4743B522A06CBA80057FA4E /* Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
 		D4743B542A06D4C30057FA4E /* Registration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Registration.swift; sourceTree = "<group>"; };
 		D4743B562A098DC40057FA4E /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		D4B6FA182A3E6D1A00B3892A /* CompassView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompassView.swift; sourceTree = "<group>"; };
+		D4B6FA1A2A3E6D3400B3892A /* HomePageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageView.swift; sourceTree = "<group>"; };
 		D4ED00372A0109D100D50BD3 /* Indoor-Navigation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Indoor-Navigation.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4ED003A2A0109D100D50BD3 /* Indoor_NavigationApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Indoor_NavigationApp.swift; sourceTree = "<group>"; };
 		D4ED003C2A0109D100D50BD3 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
@@ -101,8 +107,23 @@
 				D4259E162A15228D00342675 /* NetworkAP+CoreDataClass.swift */,
 				D4259E172A15228D00342675 /* NetworkAP+CoreDataProperties.swift */,
 				D4ED00452A0109D200D50BD3 /* Indoor_Navigation.xcdatamodeld */,
+				D4259E1D2A1532E800342675 /* NetworkAPController.swift */,
 			);
 			path = Database;
+			sourceTree = "<group>";
+		};
+		D4259E1A2A15234700342675 /* Fingerprinting */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Fingerprinting;
+			sourceTree = "<group>";
+		};
+		D45CA9562A1CB44D00F81F13 /* iBeacon */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = iBeacon;
 			sourceTree = "<group>";
 		};
 		D4743B512A06CA970057FA4E /* ContentViews */ = {
@@ -118,6 +139,15 @@
 				D46F75752A0FC94800CB1F8E /* SavedLocationsView.swift */,
 			);
 			path = ContentViews;
+			sourceTree = "<group>";
+		};
+		D4B6FA172A3E6CED00B3892A /* Compass */ = {
+			isa = PBXGroup;
+			children = (
+				D4B6FA182A3E6D1A00B3892A /* CompassView.swift */,
+				D4B6FA1A2A3E6D3400B3892A /* HomePageView.swift */,
+			);
+			path = Compass;
 			sourceTree = "<group>";
 		};
 		D4ED002E2A0109D100D50BD3 = {
@@ -143,6 +173,9 @@
 		D4ED00392A0109D100D50BD3 /* Indoor-Navigation */ = {
 			isa = PBXGroup;
 			children = (
+				D4B6FA172A3E6CED00B3892A /* Compass */,
+				D45CA9562A1CB44D00F81F13 /* iBeacon */,
+				D4259E1A2A15234700342675 /* Fingerprinting */,
 				D4259E152A15222000342675 /* Database */,
 				D4743B512A06CA970057FA4E /* ContentViews */,
 				D4ED006A2A010BAB00D50BD3 /* Indoor-Navigation.entitlements */,
@@ -319,9 +352,12 @@
 				D4259E192A15228D00342675 /* NetworkAP+CoreDataProperties.swift in Sources */,
 				D4ED003D2A0109D100D50BD3 /* LoginView.swift in Sources */,
 				D4259E182A15228D00342675 /* NetworkAP+CoreDataClass.swift in Sources */,
+				D4259E1E2A1532E800342675 /* NetworkAPController.swift in Sources */,
 				D46F75722A0FC17300CB1F8E /* ProfileDetailsView.swift in Sources */,
 				D4743B552A06D4C30057FA4E /* Registration.swift in Sources */,
+				D4B6FA192A3E6D1A00B3892A /* CompassView.swift in Sources */,
 				D46F75762A0FC94800CB1F8E /* SavedLocationsView.swift in Sources */,
+				D4B6FA1B2A3E6D3400B3892A /* HomePageView.swift in Sources */,
 				D4ED003B2A0109D100D50BD3 /* Indoor_NavigationApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

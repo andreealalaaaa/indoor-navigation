@@ -17,9 +17,9 @@ extension NetworkAP {
     }
 
     @NSManaged public var id: Int32
-    @NSManaged public var ssid: Int32
-    @NSManaged public var bssid: Int32
-    @NSManaged public var signalStrength: Int32
+    @NSManaged public var ssid: String
+    @NSManaged public var bssid: String
+    @NSManaged public var signalStrength: Double
 
 }
 
