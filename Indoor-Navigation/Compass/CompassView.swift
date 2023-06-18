@@ -10,7 +10,7 @@ import CoreLocation
 import CoreMotion
 
 struct CompassView: View{
-    @StateObject private var beaconReceiverViewModel = BeaconReceiverViewModel()
+    @ObservedObject var beaconReceiverViewModel = BeaconReceiverViewModel()
     @State var loadingView = false
     var selectedLocation: Int
     @State private var rotationAngle: Angle = .zero
@@ -28,7 +28,7 @@ struct CompassView: View{
                 backgroundColor.edgesIgnoringSafeArea(.all)
                 //                NavigationLink(destination: LoadingView(), isActive: $loadingView){
                 //
-                var matrix = beaconReceiverViewModel.matrixSearchResult
+                let matrix = beaconReceiverViewModel.matrixSearchResult
                 Text("Hello, position is \(matrix.0)")
                 Image(systemName: "hand.point.up")
                     .foregroundColor(.white)
@@ -45,7 +45,7 @@ struct CompassView: View{
     
     private func startUpdatingRotation(){
         Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { _ in
-            rotationAngle += .degrees(45)
+        rotationAngle += .degrees(45)
         }
     }
     

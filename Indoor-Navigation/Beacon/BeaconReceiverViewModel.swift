@@ -181,8 +181,55 @@ class BeaconReceiverViewModel: NSObject, ObservableObject, CLLocationManagerDele
         }
     }
     
+    func getPartOfSystem(startingPoint: (Int, Int), destination: (Int, Int)) -> Angle{
+        let xb = destination.0
+        let yb = destination.1
+        
+        let xp = startingPoint.0
+        let yp = startingPoint.1
+        
+        var angle: Angle = .zero
+        
+        if xb < xp {
+            angle = .degrees(270)
+            
+            // left
+        }else{
+            angle = .degrees(90)
+            // right
+        }
+        
+        if yb < yp{
+            angle = .degrees(180)
+            // move down
+        } else{
+            angle = .degrees(0)
+            // move up
+        }
+        
+        return angle
+    }
+    
+    func computeAngle(startingPoint: (Int, Int), destination: (Int, Int)) -> Angle{
+        let angle: Angle = getPartOfSystem(startingPoint: startingPoint, destination: destination)
+        let xb = destination.0
+        let yb = destination.1
+        
+        let xp = startingPoint.0
+        let yp = startingPoint.1
+        
+        var oppositeSide: Int = 0
+        var adjiacentSide: Int = 0
+        
+        oppositeSide = abs(yb-yp)
+        adjiacentSide = abs(xb-xp)
+        
+        
+        
+        return angle
+    }
+    
     func searchMatrixWithProximity(matrix: [[BeaconElement]], beacons: BeaconElement, proximityThreshold: Double, rssiThreshold: Double) -> (Int, Int) {
-        var bestMatchResults: [BestMatch] = []
         var bestMatch: BestMatch?
         var bestMatchProximityDifferenceB0 = 20000.0
         var bestMatchRSSIDifferenceB0 = 20000.0
