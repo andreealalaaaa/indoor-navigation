@@ -2,6 +2,14 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>NSBluetoothAlwaysUsageDescription</key>
+	<string>Bluetooth permission for detecting beacons.</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>This app uses you location for beacon ranging.</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>This app uses your location when in app for beacon detectyion.</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>The app uses this for beacons ranging.</string>
 	<key>UIBackgroundModes</key>
 	<array>
 		<string>remote-notification</string>
