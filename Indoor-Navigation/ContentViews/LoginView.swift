@@ -27,10 +27,10 @@ struct LoginView: View {
                         loginDetails
                         loginButton
                         
-                        NavigationLink(destination: BeaconReceiverViewControllerWrapper(), isActive: $showingProfileScreen) {
+                        NavigationLink(destination: CompassView(selectedLocation: 0).navigationBarBackButtonHidden(true), isActive: $showingProfileScreen) {
                         }
                     }
-                }.navigationBarHidden(true)
+                }.navigationBarHidden(true).edgesIgnoringSafeArea(.all)
             }
         }
         

@@ -11,13 +11,16 @@ struct LoadingView: View {
     @State private var completion: CGFloat = 0.0
     
     var body: some View {
-        ZStack{
-            loadingText
-            LoadingBar()
-                .onAppear {
-                    animateLoadingBar()
-                }
-        }
+        NavigationView{
+            ZStack{
+                loadingText
+                LoadingBar()
+                    .onAppear {
+                        animateLoadingBar()
+                    }
+            }
+            
+        }.edgesIgnoringSafeArea(.all)
         
     }
     
