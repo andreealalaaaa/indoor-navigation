@@ -27,7 +27,7 @@ struct LoginView: View {
                         loginDetails
                         loginButton
                         
-                        NavigationLink(destination: ProfileView().navigationBarBackButtonHidden(true), isActive: $showingProfileScreen) {
+                        NavigationLink(destination: BeaconReceiverViewControllerWrapper(), isActive: $showingProfileScreen) {
                         }
                     }
                 }.navigationBarHidden(true)
