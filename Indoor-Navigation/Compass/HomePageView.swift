@@ -17,7 +17,7 @@ struct HomePageView: View {
                 selection
                 buttonText
             }
-        }
+        }.preferredColorScheme(.light)
     }
 }
 
@@ -66,7 +66,7 @@ private extension HomePageView{
             .shadow(radius: 5)
             .padding(.top, 200)
             .overlay(
-                NavigationLink(destination: BeaconReceiverViewControllerWrapper().navigationBarBackButtonHidden(true), isActive: $changeView) {
+                NavigationLink(destination: CompassView(selectedLocation: selectedLocation).navigationBarBackButtonHidden(true), isActive: $changeView) {
             })
         }
     }

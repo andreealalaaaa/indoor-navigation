@@ -9,12 +9,13 @@ import SwiftUI
 
 struct LoadingView: View {
     @State private var completion: CGFloat = 0.0
-    
+    //@State private var backgroundColor: Color = .white
     var body: some View {
         NavigationView{
             ZStack{
+                //backgroundColor.edgesIgnoringSafeArea(.all)
                 loadingText
-                LoadingBar()
+                LoadingBar(completion: completion)
                     .onAppear {
                         animateLoadingBar()
                     }

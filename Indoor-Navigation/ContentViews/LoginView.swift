@@ -26,12 +26,12 @@ struct LoginView: View {
                         loginIcon
                         loginDetails
                         loginButton
-                        
-                        NavigationLink(destination: CompassView(selectedLocation: 0).navigationBarBackButtonHidden(true), isActive: $showingProfileScreen) {
+                       // CompassView(selectedLocation: 0)
+                        NavigationLink(destination: HomePageView().navigationBarBackButtonHidden(true), isActive: $showingProfileScreen) {
                         }
                     }
                 }.navigationBarHidden(true).edgesIgnoringSafeArea(.all)
-            }
+            }.preferredColorScheme(.light)
         }
         
         func authenticateUser(username: String, password: String) {

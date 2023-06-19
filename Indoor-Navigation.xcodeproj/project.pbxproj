@@ -10,6 +10,7 @@
 		D4259E182A15228D00342675 /* NetworkAP+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4259E162A15228D00342675 /* NetworkAP+CoreDataClass.swift */; };
 		D4259E192A15228D00342675 /* NetworkAP+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4259E172A15228D00342675 /* NetworkAP+CoreDataProperties.swift */; };
 		D4259E1E2A1532E800342675 /* NetworkAPController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4259E1D2A1532E800342675 /* NetworkAPController.swift */; };
+		D450AD0F2A405C2900C1904F /* IntermediateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D450AD0E2A405C2900C1904F /* IntermediateView.swift */; };
 		D462EEF32A0C2143003F01B2 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D462EEF22A0C2143003F01B2 /* ProfileView.swift */; };
 		D46F75722A0FC17300CB1F8E /* ProfileDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46F75712A0FC17300CB1F8E /* ProfileDetailsView.swift */; };
 		D46F75742A0FC21000CB1F8E /* PasswordChangeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46F75732A0FC21000CB1F8E /* PasswordChangeView.swift */; };
@@ -65,6 +66,7 @@
 		D4259E162A15228D00342675 /* NetworkAP+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetworkAP+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
 		D4259E172A15228D00342675 /* NetworkAP+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetworkAP+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
 		D4259E1D2A1532E800342675 /* NetworkAPController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkAPController.swift; sourceTree = "<group>"; };
+		D450AD0E2A405C2900C1904F /* IntermediateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntermediateView.swift; sourceTree = "<group>"; };
 		D462EEF22A0C2143003F01B2 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		D46F75712A0FC17300CB1F8E /* ProfileDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDetailsView.swift; sourceTree = "<group>"; };
 		D46F75732A0FC21000CB1F8E /* PasswordChangeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordChangeView.swift; sourceTree = "<group>"; };
@@ -181,6 +183,7 @@
 				D49223182A3F19B3002396AC /* MapViewControllerDelegate.swift */,
 				D492231C2A3F3716002396AC /* Color+Extension.swift */,
 				D49223322A3F7CE3002396AC /* LoadingBar.swift */,
+				D450AD0E2A405C2900C1904F /* IntermediateView.swift */,
 			);
 			path = Compass;
 			sourceTree = "<group>";
@@ -388,6 +391,7 @@
 				D4B6FA1D2A3E91C400B3892A /* LoadingView.swift in Sources */,
 				D492231D2A3F3716002396AC /* Color+Extension.swift in Sources */,
 				D4ED00442A0109D200D50BD3 /* Persistence.swift in Sources */,
+				D450AD0F2A405C2900C1904F /* IntermediateView.swift in Sources */,
 				D4743B532A06CBA80057FA4E /* Test.swift in Sources */,
 				D4259E192A15228D00342675 /* NetworkAP+CoreDataProperties.swift in Sources */,
 				D4ED003D2A0109D100D50BD3 /* LoginView.swift in Sources */,

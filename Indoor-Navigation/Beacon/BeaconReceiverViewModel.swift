@@ -31,7 +31,7 @@ class BeaconReceiverViewModel: NSObject, ObservableObject, CLLocationManagerDele
     let proximityThreshold: Double = 0.03
     let rssiThreshold: Double = 3
     
-    var matrixSearchResult: (Int, Int) = (-1, -1)
+   @Published  var matrixSearchResult: (Int, Int)? = nil
     
     let matrix: [[BeaconElement]] = [
         // row 0 with (0,0) (0,1) (0,2) (0,3)
@@ -210,7 +210,7 @@ class BeaconReceiverViewModel: NSObject, ObservableObject, CLLocationManagerDele
         return angle
     }
     
-    func computeAngle(startingPoint: (Int, Int), destination: (Int, Int)) -> Angle{
+    func computeAngle(startingPoint: (Int, Int), destination: (Int, Int)) -> Double{
         let angle: Angle = getPartOfSystem(startingPoint: startingPoint, destination: destination)
         let xb = destination.0
         let yb = destination.1
@@ -218,15 +218,19 @@ class BeaconReceiverViewModel: NSObject, ObservableObject, CLLocationManagerDele
         let xp = startingPoint.0
         let yp = startingPoint.1
         
-        var oppositeSide: Int = 0
-        var adjiacentSide: Int = 0
+        var oppositeSide: Double = 0
+        var adjiacentSide: Double = 0
         
-        oppositeSide = abs(yb-yp)
-        adjiacentSide = abs(xb-xp)
+        oppositeSide = Double(abs(yb-yp))
+        adjiacentSide = Double(abs(xb-xp))
         
+        var angleRadians = atan(oppositeSide / adjiacentSide)
+        var angleDegrees = Angle.degrees(angleRadians * 180 / .pi)
         
+        print("Opposite side \(oppositeSide) ; Adjiacent side \(adjiacentSide)")
+        print("The ANGLE IS \(angleRadians) \(angleDegrees.degrees)")
         
-        return angle
+        return angleDegrees.degrees
     }
     
     func searchMatrixWithProximity(matrix: [[BeaconElement]], beacons: BeaconElement, proximityThreshold: Double, rssiThreshold: Double) -> (Int, Int) {
