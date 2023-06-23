@@ -13,6 +13,9 @@ struct HomePageView: View {
     var body: some View {
         NavigationView{
             ZStack{
+                NavigationGifView("Navigation")
+                    .frame(width: 400, height: 400)
+                    .padding(.bottom, 550)
                 homeText
                 selection
                 buttonText
@@ -35,7 +38,9 @@ private extension HomePageView{
                 .fontWeight(.semibold)
                 .multilineTextAlignment(.center)
                 
-        }.padding(.bottom, 300)
+        }
+        .padding(.bottom, 50)
+        //.padding(.bottom, 600)
     }
     
     var selection: some View{
@@ -47,7 +52,7 @@ private extension HomePageView{
                 Text("B430").tag(3) //("B430")
             }
             .pickerStyle(.wheel)
-            .padding(.bottom, 100)
+            .padding(.top, 130)
         }
     }
     
@@ -62,11 +67,10 @@ private extension HomePageView{
             .frame(width: 300, height: 50)
             .background(.mint)
             .cornerRadius(10)
-            .padding(10)
             .shadow(radius: 5)
-            .padding(.top, 200)
+            .padding(.top, 500)
             .overlay(
-                NavigationLink(destination: CompassView(selectedLocation: selectedLocation).navigationBarBackButtonHidden(true), isActive: $changeView) {
+                NavigationLink(destination: LocationNavigationView(selectedLocation: selectedLocation).navigationBarBackButtonHidden(true), isActive: $changeView) {
             })
         }
     }

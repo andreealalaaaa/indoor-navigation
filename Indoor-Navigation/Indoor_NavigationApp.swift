@@ -9,12 +9,14 @@ import SwiftUI
 
 @main
 struct Indoor_NavigationApp: App {
-    let persistenceController = PersistenceController.shared
+    let persistenceController = DataController.shared
 
     var body: some Scene {
         WindowGroup {
+          // Registration()
           LoginView()
 //            CompassView(selectedLocation: 0)
+            //HomePageView()
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }

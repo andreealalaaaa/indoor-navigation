@@ -9,12 +9,13 @@ import SwiftUI
 
 struct IntermediateView: View {
     @StateObject private var stateManager = StateManager()
+    var selectedLocation: Int
     
     var body: some View {
             if stateManager.isSearchMatricRunning {
-                LoadingView()
+                WaitView()
             } else {
-                CompassView(selectedLocation: 0)
+                LocationNavigationView(selectedLocation: selectedLocation)
             }
         }
 
@@ -25,7 +26,7 @@ struct IntermediateView: View {
 
 struct IntermediateView_Previews: PreviewProvider {
     static var previews: some View {
-        IntermediateView()
+        IntermediateView(selectedLocation: 0)
     }
 }
 
@@ -37,9 +38,9 @@ class StateManager: ObservableObject {
     func startSearch() {
         // Perform your asynchronous task here
         beaconReceiverViewModel.matrixSearchResult
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+        //DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
             // After the task is completed, update the state variable
             self.isSearchMatricRunning = false
-        }
+        //}
     }
 }

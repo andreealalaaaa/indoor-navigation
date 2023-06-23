@@ -7,38 +7,38 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D4259E182A15228D00342675 /* NetworkAP+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4259E162A15228D00342675 /* NetworkAP+CoreDataClass.swift */; };
-		D4259E192A15228D00342675 /* NetworkAP+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4259E172A15228D00342675 /* NetworkAP+CoreDataProperties.swift */; };
-		D4259E1E2A1532E800342675 /* NetworkAPController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4259E1D2A1532E800342675 /* NetworkAPController.swift */; };
 		D450AD0F2A405C2900C1904F /* IntermediateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D450AD0E2A405C2900C1904F /* IntermediateView.swift */; };
 		D462EEF32A0C2143003F01B2 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D462EEF22A0C2143003F01B2 /* ProfileView.swift */; };
 		D46F75722A0FC17300CB1F8E /* ProfileDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46F75712A0FC17300CB1F8E /* ProfileDetailsView.swift */; };
 		D46F75742A0FC21000CB1F8E /* PasswordChangeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46F75732A0FC21000CB1F8E /* PasswordChangeView.swift */; };
 		D46F75762A0FC94800CB1F8E /* SavedLocationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46F75752A0FC94800CB1F8E /* SavedLocationsView.swift */; };
-		D4743B532A06CBA80057FA4E /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4743B522A06CBA80057FA4E /* Test.swift */; };
 		D4743B552A06D4C30057FA4E /* Registration.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4743B542A06D4C30057FA4E /* Registration.swift */; };
-		D4743B572A098DC40057FA4E /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4743B562A098DC40057FA4E /* HomeView.swift */; };
-		D49223152A3F1811002396AC /* CLLocation+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49223142A3F1811002396AC /* CLLocation+Extension.swift */; };
-		D49223172A3F193B002396AC /* UserDefaults+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49223162A3F193B002396AC /* UserDefaults+Extension.swift */; };
-		D49223192A3F19B3002396AC /* MapViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49223182A3F19B3002396AC /* MapViewControllerDelegate.swift */; };
-		D492231D2A3F3716002396AC /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D492231C2A3F3716002396AC /* Color+Extension.swift */; };
 		D492231F2A3F4D1B002396AC /* BeaconReceiverController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D492231E2A3F4D1B002396AC /* BeaconReceiverController.swift */; };
 		D49223222A3F5007002396AC /* Beacon.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49223212A3F5007002396AC /* Beacon.swift */; };
 		D49223242A3F5020002396AC /* BeaconSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49223232A3F5020002396AC /* BeaconSpecs.swift */; };
 		D49223262A3F503B002396AC /* BestMatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49223252A3F503B002396AC /* BestMatch.swift */; };
 		D49223282A3F505D002396AC /* BeaconElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49223272A3F505D002396AC /* BeaconElement.swift */; };
-		D492232A2A3F5A87002396AC /* BeaconReceiverViewControllerWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49223292A3F5A87002396AC /* BeaconReceiverViewControllerWrapper.swift */; };
-		D492232F2A3F759C002396AC /* BeaconReceiverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D492232E2A3F759C002396AC /* BeaconReceiverView.swift */; };
 		D49223312A3F75CA002396AC /* BeaconReceiverViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49223302A3F75CA002396AC /* BeaconReceiverViewModel.swift */; };
 		D49223332A3F7CE3002396AC /* LoadingBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49223322A3F7CE3002396AC /* LoadingBar.swift */; };
-		D4B6FA192A3E6D1A00B3892A /* CompassView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B6FA182A3E6D1A00B3892A /* CompassView.swift */; };
+		D4AD99DA2A423B3800689781 /* Navigation.gif in Resources */ = {isa = PBXBuildFile; fileRef = D4AD99D92A423B3800689781 /* Navigation.gif */; };
+		D4AD99DC2A423C5E00689781 /* NavigationGifView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4AD99DB2A423C5E00689781 /* NavigationGifView.swift */; };
+		D4AD99DF2A428FF700689781 /* RegistrationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4AD99DE2A428FF700689781 /* RegistrationViewModel.swift */; };
+		D4AD99E62A429A6400689781 /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4AD99E42A429A6400689781 /* User+CoreDataClass.swift */; };
+		D4AD99E72A429A6400689781 /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4AD99E52A429A6400689781 /* User+CoreDataProperties.swift */; };
+		D4B6FA192A3E6D1A00B3892A /* LocationNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B6FA182A3E6D1A00B3892A /* LocationNavigationView.swift */; };
 		D4B6FA1B2A3E6D3400B3892A /* HomePageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B6FA1A2A3E6D3400B3892A /* HomePageView.swift */; };
 		D4B6FA1D2A3E91C400B3892A /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B6FA1C2A3E91C400B3892A /* LoadingView.swift */; };
+		D4EBE30E2A43C52100A7C6A1 /* Map.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4EBE30D2A43C52100A7C6A1 /* Map.swift */; };
+		D4EBE3102A43C56800A7C6A1 /* map.gif in Resources */ = {isa = PBXBuildFile; fileRef = D4EBE30F2A43C56800A7C6A1 /* map.gif */; };
+		D4EBE3122A43D92F00A7C6A1 /* WaitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4EBE3112A43D92F00A7C6A1 /* WaitView.swift */; };
+		D4EBE3142A43D94A00A7C6A1 /* wait.gif in Resources */ = {isa = PBXBuildFile; fileRef = D4EBE3132A43D94A00A7C6A1 /* wait.gif */; };
+		D4EBE3162A43D95A00A7C6A1 /* WaitGif.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4EBE3152A43D95A00A7C6A1 /* WaitGif.swift */; };
+		D4EBE3182A43DA7E00A7C6A1 /* biggerwait.gif in Resources */ = {isa = PBXBuildFile; fileRef = D4EBE3172A43DA7E00A7C6A1 /* biggerwait.gif */; };
 		D4ED003B2A0109D100D50BD3 /* Indoor_NavigationApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4ED003A2A0109D100D50BD3 /* Indoor_NavigationApp.swift */; };
 		D4ED003D2A0109D100D50BD3 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4ED003C2A0109D100D50BD3 /* LoginView.swift */; };
 		D4ED003F2A0109D200D50BD3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4ED003E2A0109D200D50BD3 /* Assets.xcassets */; };
 		D4ED00422A0109D200D50BD3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4ED00412A0109D200D50BD3 /* Preview Assets.xcassets */; };
-		D4ED00442A0109D200D50BD3 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4ED00432A0109D200D50BD3 /* Persistence.swift */; };
+		D4ED00442A0109D200D50BD3 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4ED00432A0109D200D50BD3 /* DataController.swift */; };
 		D4ED00472A0109D200D50BD3 /* Indoor_Navigation.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D4ED00452A0109D200D50BD3 /* Indoor_Navigation.xcdatamodeld */; };
 		D4ED00522A0109D200D50BD3 /* Indoor_NavigationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4ED00512A0109D200D50BD3 /* Indoor_NavigationTests.swift */; };
 		D4ED005C2A0109D200D50BD3 /* Indoor_NavigationUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4ED005B2A0109D200D50BD3 /* Indoor_NavigationUITests.swift */; };
@@ -63,39 +63,39 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		D4259E162A15228D00342675 /* NetworkAP+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetworkAP+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
-		D4259E172A15228D00342675 /* NetworkAP+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetworkAP+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
-		D4259E1D2A1532E800342675 /* NetworkAPController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkAPController.swift; sourceTree = "<group>"; };
 		D450AD0E2A405C2900C1904F /* IntermediateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntermediateView.swift; sourceTree = "<group>"; };
 		D462EEF22A0C2143003F01B2 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		D46F75712A0FC17300CB1F8E /* ProfileDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDetailsView.swift; sourceTree = "<group>"; };
 		D46F75732A0FC21000CB1F8E /* PasswordChangeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordChangeView.swift; sourceTree = "<group>"; };
 		D46F75752A0FC94800CB1F8E /* SavedLocationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedLocationsView.swift; sourceTree = "<group>"; };
-		D4743B522A06CBA80057FA4E /* Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
 		D4743B542A06D4C30057FA4E /* Registration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Registration.swift; sourceTree = "<group>"; };
-		D4743B562A098DC40057FA4E /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
-		D49223142A3F1811002396AC /* CLLocation+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CLLocation+Extension.swift"; sourceTree = "<group>"; };
-		D49223162A3F193B002396AC /* UserDefaults+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Extension.swift"; sourceTree = "<group>"; };
-		D49223182A3F19B3002396AC /* MapViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewControllerDelegate.swift; sourceTree = "<group>"; };
-		D492231C2A3F3716002396AC /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
 		D492231E2A3F4D1B002396AC /* BeaconReceiverController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeaconReceiverController.swift; sourceTree = "<group>"; };
 		D49223212A3F5007002396AC /* Beacon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Beacon.swift; sourceTree = "<group>"; };
 		D49223232A3F5020002396AC /* BeaconSpecs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeaconSpecs.swift; sourceTree = "<group>"; };
 		D49223252A3F503B002396AC /* BestMatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BestMatch.swift; sourceTree = "<group>"; };
 		D49223272A3F505D002396AC /* BeaconElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeaconElement.swift; sourceTree = "<group>"; };
-		D49223292A3F5A87002396AC /* BeaconReceiverViewControllerWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeaconReceiverViewControllerWrapper.swift; sourceTree = "<group>"; };
-		D492232E2A3F759C002396AC /* BeaconReceiverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeaconReceiverView.swift; sourceTree = "<group>"; };
 		D49223302A3F75CA002396AC /* BeaconReceiverViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeaconReceiverViewModel.swift; sourceTree = "<group>"; };
 		D49223322A3F7CE3002396AC /* LoadingBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingBar.swift; sourceTree = "<group>"; };
-		D4B6FA182A3E6D1A00B3892A /* CompassView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompassView.swift; sourceTree = "<group>"; };
+		D4AD99D92A423B3800689781 /* Navigation.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = Navigation.gif; sourceTree = "<group>"; };
+		D4AD99DB2A423C5E00689781 /* NavigationGifView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationGifView.swift; sourceTree = "<group>"; };
+		D4AD99DE2A428FF700689781 /* RegistrationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewModel.swift; sourceTree = "<group>"; };
+		D4AD99E42A429A6400689781 /* User+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
+		D4AD99E52A429A6400689781 /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		D4B6FA182A3E6D1A00B3892A /* LocationNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationNavigationView.swift; sourceTree = "<group>"; };
 		D4B6FA1A2A3E6D3400B3892A /* HomePageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageView.swift; sourceTree = "<group>"; };
 		D4B6FA1C2A3E91C400B3892A /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		D4EBE30D2A43C52100A7C6A1 /* Map.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Map.swift; sourceTree = "<group>"; };
+		D4EBE30F2A43C56800A7C6A1 /* map.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = map.gif; sourceTree = "<group>"; };
+		D4EBE3112A43D92F00A7C6A1 /* WaitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaitView.swift; sourceTree = "<group>"; };
+		D4EBE3132A43D94A00A7C6A1 /* wait.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = wait.gif; sourceTree = "<group>"; };
+		D4EBE3152A43D95A00A7C6A1 /* WaitGif.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaitGif.swift; sourceTree = "<group>"; };
+		D4EBE3172A43DA7E00A7C6A1 /* biggerwait.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = biggerwait.gif; sourceTree = "<group>"; };
 		D4ED00372A0109D100D50BD3 /* Indoor-Navigation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Indoor-Navigation.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4ED003A2A0109D100D50BD3 /* Indoor_NavigationApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Indoor_NavigationApp.swift; sourceTree = "<group>"; };
 		D4ED003C2A0109D100D50BD3 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		D4ED003E2A0109D200D50BD3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D4ED00412A0109D200D50BD3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		D4ED00432A0109D200D50BD3 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		D4ED00432A0109D200D50BD3 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 		D4ED00462A0109D200D50BD3 /* Indoor_Navigation.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Indoor_Navigation.xcdatamodel; sourceTree = "<group>"; };
 		D4ED00482A0109D200D50BD3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D4ED004D2A0109D200D50BD3 /* Indoor-NavigationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Indoor-NavigationTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -131,30 +131,54 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		D4259E152A15222000342675 /* Database */ = {
+		D4259E152A15222000342675 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				D4259E162A15228D00342675 /* NetworkAP+CoreDataClass.swift */,
-				D4259E172A15228D00342675 /* NetworkAP+CoreDataProperties.swift */,
-				D4ED00452A0109D200D50BD3 /* Indoor_Navigation.xcdatamodeld */,
-				D4259E1D2A1532E800342675 /* NetworkAPController.swift */,
+				D4AD99E42A429A6400689781 /* User+CoreDataClass.swift */,
+				D4AD99E52A429A6400689781 /* User+CoreDataProperties.swift */,
 			);
-			path = Database;
+			path = Models;
 			sourceTree = "<group>";
 		};
 		D4743B512A06CA970057FA4E /* ContentViews */ = {
 			isa = PBXGroup;
 			children = (
-				D4ED003C2A0109D100D50BD3 /* LoginView.swift */,
-				D4743B522A06CBA80057FA4E /* Test.swift */,
-				D4743B542A06D4C30057FA4E /* Registration.swift */,
-				D4743B562A098DC40057FA4E /* HomeView.swift */,
+				D4B6FA1A2A3E6D3400B3892A /* HomePageView.swift */,
 				D462EEF22A0C2143003F01B2 /* ProfileView.swift */,
 				D46F75712A0FC17300CB1F8E /* ProfileDetailsView.swift */,
 				D46F75732A0FC21000CB1F8E /* PasswordChangeView.swift */,
 				D46F75752A0FC94800CB1F8E /* SavedLocationsView.swift */,
 			);
 			path = ContentViews;
+			sourceTree = "<group>";
+		};
+		D48365D42A444C0F001C9206 /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				D4ED00432A0109D200D50BD3 /* DataController.swift */,
+				D4ED00452A0109D200D50BD3 /* Indoor_Navigation.xcdatamodeld */,
+			);
+			path = Database;
+			sourceTree = "<group>";
+		};
+		D48365D52A444C48001C9206 /* Media */ = {
+			isa = PBXGroup;
+			children = (
+				D4EBE30F2A43C56800A7C6A1 /* map.gif */,
+				D4EBE3172A43DA7E00A7C6A1 /* biggerwait.gif */,
+				D4EBE3132A43D94A00A7C6A1 /* wait.gif */,
+				D4AD99D92A423B3800689781 /* Navigation.gif */,
+			);
+			path = Media;
+			sourceTree = "<group>";
+		};
+		D48365D62A444C8C001C9206 /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				D4EBE3112A43D92F00A7C6A1 /* WaitView.swift */,
+				D4EBE3152A43D95A00A7C6A1 /* WaitGif.swift */,
+			);
+			path = Localization;
 			sourceTree = "<group>";
 		};
 		D49223202A3F4D24002396AC /* Beacon */ = {
@@ -165,27 +189,32 @@
 				D49223232A3F5020002396AC /* BeaconSpecs.swift */,
 				D49223252A3F503B002396AC /* BestMatch.swift */,
 				D49223272A3F505D002396AC /* BeaconElement.swift */,
-				D49223292A3F5A87002396AC /* BeaconReceiverViewControllerWrapper.swift */,
-				D492232E2A3F759C002396AC /* BeaconReceiverView.swift */,
 				D49223302A3F75CA002396AC /* BeaconReceiverViewModel.swift */,
 			);
 			path = Beacon;
 			sourceTree = "<group>";
 		};
-		D4B6FA172A3E6CED00B3892A /* Compass */ = {
+		D4AD99DD2A428FE000689781 /* Registration & LogIn */ = {
 			isa = PBXGroup;
 			children = (
-				D4B6FA182A3E6D1A00B3892A /* CompassView.swift */,
-				D4B6FA1A2A3E6D3400B3892A /* HomePageView.swift */,
+				D4EBE30D2A43C52100A7C6A1 /* Map.swift */,
+				D4AD99DE2A428FF700689781 /* RegistrationViewModel.swift */,
+				D4ED003C2A0109D100D50BD3 /* LoginView.swift */,
+				D4743B542A06D4C30057FA4E /* Registration.swift */,
+			);
+			path = "Registration & LogIn";
+			sourceTree = "<group>";
+		};
+		D4B6FA172A3E6CED00B3892A /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				D4B6FA182A3E6D1A00B3892A /* LocationNavigationView.swift */,
 				D4B6FA1C2A3E91C400B3892A /* LoadingView.swift */,
-				D49223142A3F1811002396AC /* CLLocation+Extension.swift */,
-				D49223162A3F193B002396AC /* UserDefaults+Extension.swift */,
-				D49223182A3F19B3002396AC /* MapViewControllerDelegate.swift */,
-				D492231C2A3F3716002396AC /* Color+Extension.swift */,
 				D49223322A3F7CE3002396AC /* LoadingBar.swift */,
 				D450AD0E2A405C2900C1904F /* IntermediateView.swift */,
+				D4AD99DB2A423C5E00689781 /* NavigationGifView.swift */,
 			);
-			path = Compass;
+			path = Navigation;
 			sourceTree = "<group>";
 		};
 		D4ED002E2A0109D100D50BD3 = {
@@ -211,14 +240,17 @@
 		D4ED00392A0109D100D50BD3 /* Indoor-Navigation */ = {
 			isa = PBXGroup;
 			children = (
+				D48365D52A444C48001C9206 /* Media */,
+				D48365D42A444C0F001C9206 /* Database */,
+				D4259E152A15222000342675 /* Models */,
 				D49223202A3F4D24002396AC /* Beacon */,
-				D4B6FA172A3E6CED00B3892A /* Compass */,
-				D4259E152A15222000342675 /* Database */,
+				D48365D62A444C8C001C9206 /* Localization */,
+				D4AD99DD2A428FE000689781 /* Registration & LogIn */,
+				D4B6FA172A3E6CED00B3892A /* Navigation */,
 				D4743B512A06CA970057FA4E /* ContentViews */,
 				D4ED006A2A010BAB00D50BD3 /* Indoor-Navigation.entitlements */,
 				D4ED003A2A0109D100D50BD3 /* Indoor_NavigationApp.swift */,
 				D4ED003E2A0109D200D50BD3 /* Assets.xcassets */,
-				D4ED00432A0109D200D50BD3 /* Persistence.swift */,
 				D4ED00482A0109D200D50BD3 /* Info.plist */,
 				D4ED00402A0109D200D50BD3 /* Preview Content */,
 			);
@@ -355,6 +387,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				D4ED00422A0109D200D50BD3 /* Preview Assets.xcassets in Resources */,
+				D4EBE3102A43C56800A7C6A1 /* map.gif in Resources */,
+				D4EBE3142A43D94A00A7C6A1 /* wait.gif in Resources */,
+				D4EBE3182A43DA7E00A7C6A1 /* biggerwait.gif in Resources */,
+				D4AD99DA2A423B3800689781 /* Navigation.gif in Resources */,
 				D4ED003F2A0109D200D50BD3 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -384,33 +420,29 @@
 				D49223312A3F75CA002396AC /* BeaconReceiverViewModel.swift in Sources */,
 				D46F75742A0FC21000CB1F8E /* PasswordChangeView.swift in Sources */,
 				D4ED00472A0109D200D50BD3 /* Indoor_Navigation.xcdatamodeld in Sources */,
-				D492232A2A3F5A87002396AC /* BeaconReceiverViewControllerWrapper.swift in Sources */,
 				D492231F2A3F4D1B002396AC /* BeaconReceiverController.swift in Sources */,
-				D4743B572A098DC40057FA4E /* HomeView.swift in Sources */,
-				D49223152A3F1811002396AC /* CLLocation+Extension.swift in Sources */,
 				D4B6FA1D2A3E91C400B3892A /* LoadingView.swift in Sources */,
-				D492231D2A3F3716002396AC /* Color+Extension.swift in Sources */,
-				D4ED00442A0109D200D50BD3 /* Persistence.swift in Sources */,
+				D4EBE3122A43D92F00A7C6A1 /* WaitView.swift in Sources */,
+				D4AD99E72A429A6400689781 /* User+CoreDataProperties.swift in Sources */,
+				D4AD99E62A429A6400689781 /* User+CoreDataClass.swift in Sources */,
+				D4ED00442A0109D200D50BD3 /* DataController.swift in Sources */,
 				D450AD0F2A405C2900C1904F /* IntermediateView.swift in Sources */,
-				D4743B532A06CBA80057FA4E /* Test.swift in Sources */,
-				D4259E192A15228D00342675 /* NetworkAP+CoreDataProperties.swift in Sources */,
 				D4ED003D2A0109D100D50BD3 /* LoginView.swift in Sources */,
-				D4259E182A15228D00342675 /* NetworkAP+CoreDataClass.swift in Sources */,
-				D49223172A3F193B002396AC /* UserDefaults+Extension.swift in Sources */,
-				D4259E1E2A1532E800342675 /* NetworkAPController.swift in Sources */,
-				D492232F2A3F759C002396AC /* BeaconReceiverView.swift in Sources */,
+				D4AD99DC2A423C5E00689781 /* NavigationGifView.swift in Sources */,
+				D4AD99DF2A428FF700689781 /* RegistrationViewModel.swift in Sources */,
+				D4EBE3162A43D95A00A7C6A1 /* WaitGif.swift in Sources */,
 				D46F75722A0FC17300CB1F8E /* ProfileDetailsView.swift in Sources */,
 				D49223222A3F5007002396AC /* Beacon.swift in Sources */,
 				D49223242A3F5020002396AC /* BeaconSpecs.swift in Sources */,
+				D4EBE30E2A43C52100A7C6A1 /* Map.swift in Sources */,
 				D49223262A3F503B002396AC /* BestMatch.swift in Sources */,
 				D49223332A3F7CE3002396AC /* LoadingBar.swift in Sources */,
 				D4743B552A06D4C30057FA4E /* Registration.swift in Sources */,
-				D4B6FA192A3E6D1A00B3892A /* CompassView.swift in Sources */,
+				D4B6FA192A3E6D1A00B3892A /* LocationNavigationView.swift in Sources */,
 				D46F75762A0FC94800CB1F8E /* SavedLocationsView.swift in Sources */,
 				D49223282A3F505D002396AC /* BeaconElement.swift in Sources */,
 				D4B6FA1B2A3E6D3400B3892A /* HomePageView.swift in Sources */,
 				D4ED003B2A0109D100D50BD3 /* Indoor_NavigationApp.swift in Sources */,
-				D49223192A3F19B3002396AC /* MapViewControllerDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -586,8 +618,12 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_LSSupportsOpeningDocumentsInPlace = YES;
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "Bluetooth permission for detecting beacons.";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "This app uses you location for beacon ranging.";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "The app uses this for beacons ranging.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "This app uses your location when in app for beacon detectyion.";
 				INFOPLIST_KEY_NSSupportsLiveActivities = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = NO;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UIRequiresFullScreen = YES;
@@ -599,7 +635,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.findyouway.Indoor-Navigation";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.findyourway.Indoor-Navigation";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -620,8 +656,12 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_LSSupportsOpeningDocumentsInPlace = YES;
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "Bluetooth permission for detecting beacons.";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "This app uses you location for beacon ranging.";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "The app uses this for beacons ranging.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "This app uses your location when in app for beacon detectyion.";
 				INFOPLIST_KEY_NSSupportsLiveActivities = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = NO;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UIRequiresFullScreen = YES;
@@ -633,7 +673,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.findyouway.Indoor-Navigation";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.findyourway.Indoor-Navigation";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

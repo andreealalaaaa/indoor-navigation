@@ -9,4 +9,15 @@
         <attribute name="signalStrength" optional="YES" attributeType="Double" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="ssid" optional="YES" attributeType="String"/>
     </entity>
+    <entity name="User" representedClassName=".User" syncable="YES">
+        <attribute name="email" attributeType="String" minValueString="5" maxValueString="100" defaultValueString="userEmail"/>
+        <attribute name="faculty" attributeType="String" defaultValueString="userFaculty"/>
+        <attribute name="firstName" attributeType="String" minValueString="1" maxValueString="80" defaultValueString="user"/>
+        <attribute name="group" attributeType="String" minValueString="1" defaultValueString="userGroup"/>
+        <attribute name="id" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="lastName" attributeType="String" minValueString="1" maxValueString="100" defaultValueString="userLastName"/>
+        <attribute name="password" attributeType="String" minValueString="4" maxValueString="100" defaultValueString="password"/>
+        <attribute name="specialization" attributeType="String" minValueString="0" maxValueString="50" defaultValueString="specialization"/>
+        <attribute name="year" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+    </entity>
 </model>

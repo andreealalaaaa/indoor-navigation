@@ -12,6 +12,13 @@ import SwiftUI
 class BeaconReceiverViewModel: NSObject, ObservableObject, CLLocationManagerDelegate{
     var locationManager: CLLocationManager!
     var beaconRegion: CLBeaconRegion!
+    var backgroundcOLORb: Color = .clear
+    @Published var proxCompass: CLProximity = .unknown
+    
+    @Published var backgroundColor: Color = .mint
+    @Published var isSearchRunning = false
+
+    //var compassView = CompassView(selectedLocation: 0)
     
     let majorValue: CLBeaconMajorValue = 0
     let minorValue: CLBeaconMinorValue = 0
@@ -32,6 +39,8 @@ class BeaconReceiverViewModel: NSObject, ObservableObject, CLLocationManagerDele
     let rssiThreshold: Double = 3
     
    @Published  var matrixSearchResult: (Int, Int)? = nil
+    
+    var destinationBeacon: Int = 0
     
     let matrix: [[BeaconElement]] = [
         // row 0 with (0,0) (0,1) (0,2) (0,3)
@@ -96,17 +105,9 @@ class BeaconReceiverViewModel: NSObject, ObservableObject, CLLocationManagerDele
         if status == .authorizedAlways || status == .authorizedWhenInUse {
             if CLLocationManager.isMonitoringAvailable(for: CLBeaconRegion.self) {
                 if CLLocationManager.isRangingAvailable() {
-                    print("in autorizare")
                     monitorBeacons()
                 }
-                else{
-                    print("nu am permisiune la ranging")
-                }
-            }else{
-                print("nu am persmisiune la monitorizare")
             }
-        }else{
-            print("not always authorized")
         }
     }
 
@@ -143,7 +144,7 @@ class BeaconReceiverViewModel: NSObject, ObservableObject, CLLocationManagerDele
             let accuracy = Double(beacon.accuracy)
             let proximity = Double(beacon.proximity.rawValue)
             let rssi = Double(beacon.rssi)
-
+            
             if rssi != 0.0 && accuracy != -1 {
                 if beacon.major == 13070 && mintBeaconCount  < 10 {
                     mintBeaconCount += 1
@@ -165,10 +166,8 @@ class BeaconReceiverViewModel: NSObject, ObservableObject, CLLocationManagerDele
                 }
                 print("\(uuid), \(major), \(minor), \(accuracy), \(proximity), \(rssi)")
             }
-
-            if mintBeaconCount == 10 && lightblueBeaconCount == 10 && blueberryBeaconCount == 10 && iphoneBeaconCount == 10 {
-                stopRangingBeacon()
-                
+            
+            if mintBeaconCount == 10 && lightblueBeaconCount == 10 && blueberryBeaconCount == 10 && iphoneBeaconCount == 10 && matrixSearchResult == nil{
                 let b0 = computeBeaconAvg(readBeacons: iphoneBeacons)
                 let b1 = computeBeaconAvg(readBeacons: lightblueBeacons)
                 let b2 = computeBeaconAvg(readBeacons: mintBeacons)
@@ -176,10 +175,35 @@ class BeaconReceiverViewModel: NSObject, ObservableObject, CLLocationManagerDele
                 let results = BeaconElement(beaconSpecsB0: b0, beaconSpecsB1: b1, beaconSpecsB2: b2, beaconSpecsB3: b3)
                 
                 matrixSearchResult = searchMatrixWithProximity(matrix: matrix, beacons: results, proximityThreshold: proximityThreshold, rssiThreshold: rssiThreshold)
-                
+            }
+            
+            if major == destinationBeacon{
+                print("asta e \(major)")
+                if beacon.proximity != .unknown{
+                    updateBackground(beacon.proximity)
+                    proxCompass = beacon.proximity
+                }
             }
         }
     }
+    
+    func updateBackground(_ distance: CLProximity) {
+        var redNew = Color(hue: 0.0, saturation: 0.7, brightness: 1.0)
+        var greenNew = Color(hue: 0.3, saturation: 0.7, brightness: 0.8)
+        var orangeNew = Color(hue: 0.1, saturation: 0.7, brightness: 1.0)
+        var lightGray = Color(hue: 0.2, saturation: 0.0, brightness: 0.7)
+        switch distance {
+        case .unknown:
+            backgroundColor = lightGray
+        case .far:
+            backgroundColor = redNew
+        case .near:
+            backgroundColor = orangeNew
+        case .immediate:
+            backgroundColor = greenNew
+        }
+    }
+
     
     func getPartOfSystem(startingPoint: (Int, Int), destination: (Int, Int)) -> Angle{
         let xb = destination.0
@@ -215,6 +239,7 @@ class BeaconReceiverViewModel: NSObject, ObservableObject, CLLocationManagerDele
         let xb = destination.0
         let yb = destination.1
         
+        destinationBeacon = verifyDestinationBeacon(x: xb, y: yb)
         let xp = startingPoint.0
         let yp = startingPoint.1
         
@@ -231,6 +256,20 @@ class BeaconReceiverViewModel: NSObject, ObservableObject, CLLocationManagerDele
         print("The ANGLE IS \(angleRadians) \(angleDegrees.degrees)")
         
         return angleDegrees.degrees
+    }
+    
+    func verifyDestinationBeacon(x: Int, y: Int) -> Int{
+        if x == 0 && y == 0{
+            return 1
+        } else if x == 0 && y == 3{
+            return 41106
+        } else if x == 3 && y == 0{
+            return 15754
+        } else if x == 3 && y == 3{
+            return 13070
+        }
+        
+        return 0
     }
     
     func searchMatrixWithProximity(matrix: [[BeaconElement]], beacons: BeaconElement, proximityThreshold: Double, rssiThreshold: Double) -> (Int, Int) {
@@ -316,12 +355,36 @@ class BeaconReceiverViewModel: NSObject, ObservableObject, CLLocationManagerDele
         print("avg is rssi: \(resultRSSI) and proximity: \(resultProximity)")
         return BeaconSpecs(rssi: resultRSSI, proximity: resultProximity)
     }
-
-    func stopRangingBeacon() {
+    
+    func stopRangingAll(){
         for region in beaconRegions {
             locationManager.stopRangingBeacons(satisfying: region.beaconIdentityConstraint)
         }
 
         beaconRegions.removeAll()
+    }
+    
+    func stopRangingBeaconB0() {
+        let b0Region = beaconRegions[3]
+        locationManager.stopRangingBeacons(satisfying: b0Region.beaconIdentityConstraint)
+        beaconRegions.remove(at: 3)
+    }
+    
+    func stopRangingBeaconB3() {
+        let b3Region = beaconRegions[2]
+        locationManager.stopRangingBeacons(satisfying: b3Region.beaconIdentityConstraint)
+        beaconRegions.remove(at: 2)
+    }
+    
+    func stopRangingBeaconB2() {
+        let b2Region = beaconRegions[1]
+        locationManager.stopRangingBeacons(satisfying: b2Region.beaconIdentityConstraint)
+        beaconRegions.remove(at: 1)
+    }
+    
+    func stopRangingBeaconB1() {
+        let b1Region = beaconRegions[0]
+        locationManager.stopRangingBeacons(satisfying: b1Region.beaconIdentityConstraint)
+        beaconRegions.remove(at: 0)
     }
 }
