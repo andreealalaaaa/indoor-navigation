@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ProfileView: View {
+    
     @State private var changeDetails =  false
     @State private var changePassword =  false
     @State private var  savedLocations =  false
