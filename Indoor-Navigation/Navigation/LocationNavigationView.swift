@@ -9,10 +9,12 @@ import SwiftUI
 import CoreLocation
 import CoreMotion
 import Combine
+import SwiftUI
+import CoreBluetooth
+import simd
 
 struct LocationNavigationView: View{
     @ObservedObject var beaconReceiverViewModel = BeaconReceiverViewModel()
-    @State var loadingView = false
     @State private var rotationAngle: Angle = .zero
     var selectedLocation: Int
     
@@ -25,16 +27,39 @@ struct LocationNavigationView: View{
     
     var destination: (Int, Int) {
             switch selectedLocation {
-            case 0:
+//          test case 2 measuring unit = 0.5 m
+            case 4:
                 return (0, 0)
             case 1:
-                return (0, 3)
+                return (12, 0)
             case 2:
-                return (3, 0)
+                return (0, 17)
             case 3:
-                return (3, 3)
+                return (12, 17)
             default:
-                return (0, 0)
+                return (-1, -1)
+//          test case 2 measuring unit = 1 m
+//            case 4:
+//                return (0, 0)
+//            case 1:
+//                return (7, 0)
+//            case 2:
+//                return (0, 9)
+//            case 3:
+//                return (7, 9)
+//            default:
+//                return (-1, -1)
+//          test case 2 measuring unit = 2 m
+//            case 4:
+//                return (0, 0)
+//            case 1:
+//                return (3, 0)
+//            case 2:
+//                return (0, 4)
+//            case 3:
+//                return (3, 4)
+//            default:
+//                return (-1, -1)
             }
         }
     
@@ -46,13 +71,19 @@ struct LocationNavigationView: View{
             
             let xb = destination.0
             let yb = destination.1
-            print("result ", xb, yb)
+            print("result ", xp, yp)
             
             let angle = beaconReceiverViewModel.computeAngle(startingPoint: (xp, yp), destination: (xb, yb))
-            if beaconReceiverViewModel.backgroundColor == green{
-                return "You arrived at your destination."
+            
+            if (angle == 0){
+                return "You are already at the destination!"
             }
-            return "Please follow the finger! ANGLE IS \(angle)"
+            
+            if beaconReceiverViewModel.backgroundColor == green{
+                return "You arrived at your destination!"
+            }
+            
+            return "Please follow the direction given by the pointer!"
         } else {
             return "Please don't move while your location is computed!"
         }
@@ -60,7 +91,6 @@ struct LocationNavigationView: View{
     
     var computedAngle: Double {
         if let result = beaconReceiverViewModel.matrixSearchResult {
-            //stopUpdatingRotation()
             let xp = result.0
             let yp = result.1
             
@@ -74,14 +104,10 @@ struct LocationNavigationView: View{
         }
     }
     
-    init(selectedLocation: Int) {
-        self.selectedLocation = selectedLocation
-    }
-    
     var body: some View {
         NavigationView{
             
-                if beaconReceiverViewModel.backgroundColor == Color.blue {
+                if beaconReceiverViewModel.backgroundColor == Color.pink {
                     WaitView()
                 } else{
                     ZStack{
@@ -110,27 +136,5 @@ struct LocationNavigationView: View{
 struct LocationNavigationView_Previews: PreviewProvider {
     static var previews: some View {
         LocationNavigationView(selectedLocation: 0)
-    }
-}
-
-
-extension Color {
-    static func background(for proximity: CLProximity?, isLoading: Bool) -> Color {
-        if isLoading {
-            return .mint // Or any other color you'd like to use while loading
-        }
-        
-        switch proximity {
-        case .immediate:
-            return .green
-        case .near:
-            return .yellow
-        case .far:
-            return .red
-        case .unknown:
-            fallthrough
-        default:
-            return .gray
-        }
     }
 }

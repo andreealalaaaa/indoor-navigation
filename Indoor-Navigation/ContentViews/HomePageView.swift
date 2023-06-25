@@ -2,7 +2,7 @@
 //  HomePageView.swift
 //  Indoor-Navigation
 //
-//  Created by Andreea Miculescu on 18.06.2023.
+//  Created by Andreea Miculescu.
 //
 
 import SwiftUI
@@ -10,6 +10,7 @@ import SwiftUI
 struct HomePageView: View {
     @State private var selectedLocation = 0
     @State private var changeView = false
+    
     var body: some View {
         NavigationView{
             ZStack{
@@ -40,16 +41,16 @@ private extension HomePageView{
                 
         }
         .padding(.bottom, 50)
-        //.padding(.bottom, 600)
     }
     
     var selection: some View{
         Section{
             Picker(selection: $selectedLocation, label: Text("Choose laboratory")) {
-                Text("B400").tag(0) //("B400")
-                Text("B410").tag(1) //("B410")
-                Text("B420").tag(2) //("B420")
-                Text("B430").tag(3) //("B430")
+                Text("").tag(0)
+                Text("B414").tag(2)
+                Text("B418").tag(1)
+                Text("B424").tag(3)
+                Text("Stairs").tag(4)
             }
             .pickerStyle(.wheel)
             .padding(.top, 130)

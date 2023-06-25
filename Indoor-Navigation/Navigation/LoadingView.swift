@@ -15,10 +15,10 @@ struct LoadingView: View {
             ZStack{
                 //backgroundColor.edgesIgnoringSafeArea(.all)
                 loadingText
-                LoadingBar(completion: completion)
-                    .onAppear {
-                        animateLoadingBar()
-                    }
+                //LoadingBar(completion: completion)
+//                    .onAppear {
+//                        animateLoadingBar()
+//                    }
             }
             
         }.edgesIgnoringSafeArea(.all)

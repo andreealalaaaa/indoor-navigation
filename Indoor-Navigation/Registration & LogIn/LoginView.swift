@@ -23,6 +23,7 @@ struct LoginView: View {
     var hashedPassword: String {
         registrationViewModel.getStoredHashedPassword(email: username) ?? ""
     }
+    
     var body: some View {
            NavigationView {
                ScrollView {
@@ -91,20 +92,6 @@ struct LoginView: View {
             showWrongPasswordAlert = true
         }
     }
-    
-//    func authenticateUser(username: String, password: String) {
-//            guard userExists() else {
-//                showAlert = true
-//                return
-//            }
-//
-//            if passwordMatchesHashedPassword(password: password) || !userExists(){
-//                showingProfileScreen = true
-//                print("merge")
-//            } else {
-//                showWrongPasswordAlert = true
-//            }
-//        }
 }
 
 

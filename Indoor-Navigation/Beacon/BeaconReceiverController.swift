@@ -244,7 +244,6 @@ class BeaconReceiverViewController: UIViewController, CLLocationManagerDelegate 
                 }
             }
 
-
             if let bestMatch = bestMatch {
                 print("row: ", bestMatch.rowIndex," column: ", bestMatch.columnIndex)
             } else{

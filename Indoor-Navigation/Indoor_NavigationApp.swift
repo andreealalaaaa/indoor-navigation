@@ -13,10 +13,7 @@ struct Indoor_NavigationApp: App {
 
     var body: some Scene {
         WindowGroup {
-          // Registration()
-          LoginView()
-//            CompassView(selectedLocation: 0)
-            //HomePageView()
+           LoginView()
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }

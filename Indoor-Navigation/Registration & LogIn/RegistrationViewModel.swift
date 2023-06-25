@@ -19,17 +19,11 @@ class RegistrationViewModel: ObservableObject{
         return DataController.shared.container
     }()
     
-    
-    func isValid(){
-        
-    }
-    
-    
     func saveToDb(firstName: String, lastName: String, faculty: String, specialization: String, year: Int, group: String, email: String, password: String) {
         let context = persistentContainer.viewContext
         let user = User(context: context)
         
-        // Set user properties
+        // Set data
         currentMaxID += 1
         user.id = currentMaxID
         user.firstName = firstName
@@ -40,8 +34,8 @@ class RegistrationViewModel: ObservableObject{
         user.group = group
         user.email = email
         user.password = password
-//        user.repeatPassword = repeatPassword
-
+        
+        // Save record to Core Data
         do {
             try context.save()
             print("User saved successfully to Core Data.")
@@ -51,7 +45,7 @@ class RegistrationViewModel: ObservableObject{
         
         let record = CKRecord(recordType: "User")
         
-        // Set record field values
+        // Set data for CKRecord
         record.setValue(user.firstName, forKey: "firstName")
         record.setValue(user.lastName, forKey: "lastName")
         record.setValue(user.faculty, forKey: "faculty")
@@ -60,7 +54,6 @@ class RegistrationViewModel: ObservableObject{
         record.setValue(user.group, forKey: "group")
         record.setValue(user.email, forKey: "email")
         record.setValue(user.password, forKey: "password")
-//        record.setValue(user.repeatPassword, forKey: "repeatPassword")
         
         print("Set record field values.")
 
@@ -89,8 +82,6 @@ class RegistrationViewModel: ObservableObject{
                 completion(Array(records), nil)
             }
         }
-        
-        printUsers()
     }
     
     func fetchUsersFromCoreData() {
@@ -100,10 +91,6 @@ class RegistrationViewModel: ObservableObject{
         do {
             let users = try context.fetch(fetchRequest)
             fetchedUsers = users
-            
-            for user in fetchedUsers {
-                print(user.email!)
-            }
         } catch {
             print("Failed to fetch users from Core Data: \(error)")
         }
@@ -168,49 +155,7 @@ class RegistrationViewModel: ObservableObject{
         return nil
     }
 
-    
-//    func fetchUsers(){
-//        let context = persistentContainer.viewContext
-//        let fetchRequest: NSFetchRequest<User> = User.fetchRequest()
-//
-//        do {
-//                let users = try context.fetch(fetchRequest)
-//                for user in users {
-//                    let firstName = user.firstName
-//                    let lastName = user.lastName
-//                    let faculty = user.faculty
-//                    let specialization = user.specialization
-//                    let year = user.year
-//                    let group = user.group
-//                    let email = user.email
-//                    let password = user.password
-//                    let repeatedPassword = user.repeatPassword
-//
-//                    let u = User()
-//                    u.firstName = firstName
-//                    u.lastName = lastName
-//                    u.faculty = faculty
-//                    u.specialization = specialization
-//                    u.year = year
-//                    u.group = group
-//                    u.email = email
-//                    u.password = password
-//                    u.repeatPassword = repeatedPassword
-//
-//                    fetchedUsers.append(u)
-//                }
-//            } catch {
-//                print("Failed to fetch users: \(error)")
-//            }
-//            self.printUsers()
-//        }
-    
-    
-    
-    
-    
     func printUsers(){
-        
         fetchUsersFromCoreData()
         fetchUsers()
         for u in fetchedUsers{

@@ -19,7 +19,6 @@ struct WaitView: View {
             WaitGif("biggerwait")
                 .padding(.bottom, 200)
         }
-        
     }
 }
 
