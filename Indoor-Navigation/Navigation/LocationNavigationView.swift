@@ -77,7 +77,7 @@ struct LocationNavigationView: View{
             
             if (angle == 0){
                 return "You are already at the destination!"
-            }
+            } 
             
             if beaconReceiverViewModel.backgroundColor == green{
                 return "You arrived at your destination!"
