@@ -9,7 +9,7 @@ import SwiftUI
 
 @main
 struct Indoor_NavigationApp: App {
-    let persistenceController = PersistenceController.shared
+    let persistenceController = DataController.shared
 
     var body: some Scene {
         WindowGroup {
@@ -17,4 +17,9 @@ struct Indoor_NavigationApp: App {
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }
+    
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+            
+            return true
+        }
 }
